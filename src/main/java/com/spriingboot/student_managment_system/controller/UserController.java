@@ -12,6 +12,7 @@ public class UserController {
 
     private AuthService authService;
 
+
     public UserController(AuthService authService){
         this.authService=authService;
     }
