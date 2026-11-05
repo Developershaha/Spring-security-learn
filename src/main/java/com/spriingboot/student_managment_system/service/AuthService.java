@@ -15,9 +15,9 @@ public class AuthService {
     private UserRepository userRepository;
 
     private RoleRepository roleRepository;
-    private PasswordEncoder passwordEncoder =new BCryptPasswordEncoder();
-    public AuthService(UserRepository userRepository,RoleRepository roleRepository){
-//        this.passwordEncoder=passwordEncoder;
+    private PasswordEncoder passwordEncoder;
+    public AuthService(UserRepository userRepository,RoleRepository roleRepository,PasswordEncoder passwordEncoder){
+        this.passwordEncoder=passwordEncoder;
         this.userRepository=userRepository;
         this.roleRepository=roleRepository;
     }

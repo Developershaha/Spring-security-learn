@@ -30,7 +30,7 @@ public class User {
         this.roles = roles;
     }
 
-    @ManyToMany
+    @ManyToMany // by default lazy initialise so roles not getting
     @JoinTable(
             name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),
